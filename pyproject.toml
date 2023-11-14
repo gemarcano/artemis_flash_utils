@@ -21,3 +21,6 @@ classifiers = [
 
 [project.urls]
 "Upstream" = "https://github.com/sparkfun/Apollo3_Uploader_SVL"
+
+[project.scripts]
+svl = "svl:main"
