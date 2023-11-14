@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "svl"
+version = "1.7.0"
+authors = [
+    { name = "Ambiq Micro" },
+]
+license = { file="LICENSE" }
+description = "The SparkFun Variable Loader (SVL) serial uploader used on SparkFun Apollo3 and Artemis boards"
+readme = "README.md"
+dependencies = ["pyserial"]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Upstream" = "https://github.com/sparkfun/Apollo3_Uploader_SVL"
