@@ -1,10 +1,12 @@
 ![generate executables](https://github.com/sparkfun/Apollo3_Uploader_SVL/workflows/generate%20executables/badge.svg)
 
-# Apollo3 Uploader - SparkFun Variable Loader (SVL)
+# Apollo3 Uploaders - SparkFun Variable Loader (SVL) and Ambiq Secure Bootloader (ASB)
 
-This repository packages up the [upstreeam SVL flasher application](https://github.com/sparkfun/Apollo3_Uploader_SVL) in a more typical python package.
+This repository packages up the [upstream SVL flasher application](https://github.com/sparkfun/Apollo3_Uploader_SVL) and [ASB programmer](https://github.com/sparkfun/Apollo3_Uploader_ASB) in a more typical python package.
 
 The ```svl``` bootloader is the default bootloader on Artemis module--based boards. This repo contains both the Python programs that are used to send code to a board and the source code for the program that receives code on an Artemis module.
+
+The ```asb``` bootloader is part of the Apollo3 silicon, and is controlled by the Info0 OTP registers. As Sparkfun has it configured, it is not using Secure Boot, and on exit it looks at the flat binary at location `0xC000` in flash. It will check the stack pointer at `0xC000` then jump to the "reset" vector at location `0xC004`.
 
 The bootloader for the Artemis can be upgraded via Arduino using [these instructions](https://learn.sparkfun.com/tutorials/designing-with-the-sparkfun-artemis/all#troubleshooting). It can also be upgraded using the [Artemis Firmware Upload GUI](https://github.com/sparkfun/Artemis-Firmware-Upload-GUI).
 
