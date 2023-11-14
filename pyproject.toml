@@ -9,9 +9,9 @@ authors = [
     { name = "Ambiq Micro" },
 ]
 license = { file="LICENSE" }
-description = "The SparkFun Variable Loader (SVL) serial uploader used on SparkFun Apollo3 and Artemis boards"
+description = "The SparkFun Variable Loader (SVL) and Ambiq Secure Bootloader (ASB) used on SparkFun Apollo3 and Artemis boards"
 readme = "README.md"
-dependencies = ["pyserial"]
+dependencies = ["pyserial", "pycryptodome"]
 requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
@@ -24,3 +24,4 @@ classifiers = [
 
 [project.scripts]
 svl = "svl:main"
+asb = "asb:main"
